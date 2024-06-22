@@ -1,0 +1,52 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex: 0.1;
+    flex-direction: row;
+    background-color: #474747;
+}
+
+
+#scramble {
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 200%;
+}
+
+.bg {
+    background-color: #000000;
+    flex: 1;
+}
+
+.timer-stats {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.time {
+    font-size: 700%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.time, .ao12, .ao5{
+    padding-top: 0%;
+    padding-bottom: 0%;
+    text-align: center;
+}
+
+.ao5, .ao12 {
+    font-size: 200%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
