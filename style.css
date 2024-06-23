@@ -3,6 +3,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    background-color: black;
 }
 
 .header {
@@ -21,7 +22,6 @@ body {
 }
 
 .bg {
-    background-color: #000000;
     flex: 1;
 }
 
@@ -33,13 +33,13 @@ body {
     color: white;
 }
 
-.time {
+#time {
     font-size: 700%;
     margin-bottom: 1%;
     margin-top: 1%;
 }
 
-.time, .ao12, .ao5{
+#time, .ao12, .ao5{
     padding-top: 0%;
     padding-bottom: 0%;
     text-align: center;
