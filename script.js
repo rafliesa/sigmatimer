@@ -97,7 +97,7 @@ function aoCounter(param, n){
     let worse = null;
     let best = null;
     let average = 0;
-    let slicedParam = param.slice(param.length-5, param.length);
+    let slicedParam = param.slice(param.length-n, param.length);
 
     for (const i of slicedParam) {
         if (worse == null) {
