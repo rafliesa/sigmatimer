@@ -39,13 +39,13 @@ body {
     margin-top: 1%;
 }
 
-#time, .ao12, .ao5{
+#time, #ao12, #ao5{
     padding-top: 0%;
     padding-bottom: 0%;
     text-align: center;
 }
 
-.ao5, .ao12 {
+#ao5, #ao12 {
     font-size: 200%;
     margin-bottom: 0px;
     margin-top: 0px;
