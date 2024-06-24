@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sigma Timer</title>
+    <script src="https://cdn.cubing.net/js/scramble-display" type="module"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,6 +18,9 @@
                 <p id="ao5"> Ao5: - </p>
                 <p id="ao12"> Ao12: - </p>
             </div>
+        </div>
+        <div class="visualizer">
+            <scramble-display id="scramble-visualization" ondblclick="changeState()"></scramble-display>
         </div>
     </div>
 

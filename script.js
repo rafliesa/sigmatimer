@@ -1,5 +1,6 @@
 let scramble = scramble_generator();
 document.getElementById("scramble").textContent = scramble;
+document.getElementById("scramble-visualization").setAttribute("scramble", `${scramble}`);
 const time = document.getElementById("time");
 
 let result = new Map();
@@ -51,15 +52,18 @@ document.body.onkeydown = function(e){
     const header = document.querySelectorAll(".header")[0];
     const avg = document.querySelectorAll(".avg")[0];
     const time = document.getElementById("time");
+    const visualizer = document.getElementById("scramble-visualization");
     if(e.key == " " || e.code == "Space" || e.keycode == 32){
         if(!isRunning){
             header.style.visibility = "hidden";
             avg.style.visibility = "hidden";    
+            visualizer.style.visibility = "hidden";    
             time.style.color = "#15ff00";
         }
         else if(isRunning){
             scramble = scramble_generator();
             document.getElementById("scramble").textContent = scramble;
+            document.getElementById("scramble-visualization").setAttribute("scramble", `${scramble}`);
             elapsedTime = Date.now() - startTime;
             isRunning = false;
             clearInterval(timer);
@@ -73,6 +77,7 @@ document.body.onkeydown = function(e){
             }
             header.style.visibility = "visible";
             avg.style.visibility = "visible";
+            visualizer.style.visibility = "visible";
         }
     }
 }
@@ -117,4 +122,13 @@ function aoCounter(param, n){
     average -= (best + worse);
     average = average/(n- 2);
     return average.toFixed(2);
+}
+
+function changeState() {
+    const cube = document.getElementById("scramble-visualization");
+    if (cube.getAttribute("visualization") == "3D") {
+        cube.setAttribute("visualization", "2D");
+    } else {
+        cube.setAttribute("visualization", "3D");
+    }
 }
