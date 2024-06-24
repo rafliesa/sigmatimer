@@ -23,6 +23,7 @@ body {
 
 .bg {
     flex: 1;
+    user-select: none;
 }
 
 .timer-stats {
